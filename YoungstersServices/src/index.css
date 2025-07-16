@@ -141,7 +141,9 @@ a {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(249, 87, 56, 0.4);
 }
-
+.btn-primary .active {
+  color: var(--secondary-color);
+}
 .btn-secondary {
   background-color: var(--primary-color);
   color: var(--white);
@@ -436,7 +438,7 @@ a {
 
 .service-icon {
   font-size: 3rem;
-  color: var(--accent-color);
+  color: var(--primary-color);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -886,8 +888,13 @@ a {
 }
 
 .feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: var(--background-color);
-  padding: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+
   border-radius: var(--border-radius);
   text-align: center;
   transition: var(--transition-smooth);
@@ -1111,7 +1118,7 @@ a {
 .section-header {
   text-align: center;
   margin-bottom: var(--spacing-xl);
-  max-width: 800px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1130,7 +1137,7 @@ a {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: var(--spacing-lg);
   margin-top: var(--spacing-xl);
 }
@@ -1192,7 +1199,7 @@ a {
 
 .service-icon i {
   font-size: 2rem;
-  color: var(--white);
+  color: var(--accent-color);
 }
 
 .service-title {
@@ -1358,7 +1365,7 @@ a {
   
   .pricing-grid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
   }
   
   .pricing-card.popular {
@@ -1439,8 +1446,12 @@ a {
   padding: var(--spacing-md);
   background: var(--background-color);
   border-radius: var(--border-radius);
+  transition: var(--transition-smooth);
 }
-
+.platform-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
 .platform-item i {
   font-size: 3rem;
   color: var(--accent-color);

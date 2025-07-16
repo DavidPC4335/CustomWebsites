@@ -47,8 +47,8 @@ const Header = () => {
             <Link to="/about" className={isActive('/about')} onClick={closeMenu}>About</Link>
             <Link to="/pricing" className={isActive('/pricing')} onClick={closeMenu}>Pricing</Link>
             <Link to="/testimonials" className={isActive('/testimonials')} onClick={closeMenu}>Testimonials</Link>
-            <Link to="/contact" className={isActive('/contact')} onClick={closeMenu}>Contact</Link>
-            <Link to="/contact" className="btn btn-primary" onClick={closeMenu}>Get a Quote</Link>
+            {/* <Link to="/contact" className={isActive('/contact')} onClick={closeMenu}>Contact</Link> */}
+            <Link to="/contact" className={`btn btn-primary ${location.pathname==='/contact' ? 'active' : ''}`} onClick={closeMenu}>Get a Quote</Link>
           </nav>
           
           <button className="mobile-menu-toggle" onClick={toggleMenu}>

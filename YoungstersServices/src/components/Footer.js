@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { links } from '../config';
 const Footer = () => {
   return (
     <footer id="contact" className="footer">
@@ -51,19 +51,16 @@ const Footer = () => {
         </div>
 
         <div className="social-links">
-          <a href="#" className="social-link" aria-label="Facebook">
+          <a href={links.facebook} target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Facebook">
             <i className="fab fa-facebook"></i>
           </a>
-          <a href="#" className="social-link" aria-label="Twitter">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="#" className="social-link" aria-label="Instagram">
+          {/* <a href="#" className="social-link" aria-label="Instagram">
             <i className="fab fa-instagram"></i>
           </a>
           <a href="#" className="social-link" aria-label="LinkedIn">
             <i className="fab fa-linkedin"></i>
-          </a>
-          <a href="#" className="social-link" aria-label="Google Reviews">
+          </a> */}
+          <a href={links.google} className="social-link" aria-label="Google Reviews">
             <i className="fab fa-google"></i>
           </a>
         </div>

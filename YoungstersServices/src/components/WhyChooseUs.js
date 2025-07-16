@@ -25,6 +25,14 @@ const WhyChooseUs = () => {
     {
       icon: 'fas fa-leaf',
       text: 'Eco-Friendly Disposal'
+    },
+    {
+      icon: 'fas fa-map-marker-alt',
+      text:'Support Small Business'
+    },
+    {
+      icon: 'fas fa-handshake',
+      text: 'Locally-Owned & Operated'
     }
   ];
 

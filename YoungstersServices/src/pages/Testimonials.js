@@ -1,29 +1,30 @@
 import React from 'react';
 import Testimonials from '../components/Testimonials';
-
+import heroBg from '../assets/hero-bg.jpg';
+import { links } from '../config';
 const TestimonialsPage = () => {
   const additionalTestimonials = [
     {
-      name: 'Jennifer Martinez',
+      name: 'Phillip Chenier',
       rating: 5,
-      text: 'Outstanding service from start to finish! The team was professional, careful with our belongings, and completed the move faster than expected. Highly recommend!',
-      service: 'Moving Services',
-      date: 'March 2024'
+      text: 'My name is Phillip Chenier owner of JT appliance. I’ve been using youngsters services for the last six months to do my daily deliveries For my appliances, they are truly professional honest and straight to the point. I highly recommend Them for your daily removal, deliveries or other services that they provide',
+      service: 'Corporate Client',
+      date: 'June 2025'
     },
-    {
-      name: 'Robert Lee',
-      rating: 5,
-      text: 'Great experience with their delivery service. They handled my fragile artwork with extreme care and delivered it safely. Will use them again!',
-      service: 'Delivery Services',
-      date: 'February 2024'
-    },
-    {
-      name: 'Amanda Davis',
-      rating: 5,
-      text: 'Perfect junk removal service! They cleared out my basement completely and even swept up afterward. Fair pricing and excellent customer service.',
-      service: 'Junk Removal',
-      date: 'January 2024'
-    }
+    // {
+    //   name: 'Robert Lee',
+    //   rating: 5,
+    //   text: 'Great experience with their delivery service. They handled my fragile artwork with extreme care and delivered it safely. Will use them again!',
+    //   service: 'Delivery Services',
+    //   date: 'February 2024'
+    // },
+    // {
+    //   name: 'Amanda Davis',
+    //   rating: 5,
+    //   text: 'Perfect junk removal service! They cleared out my basement completely and even swept up afterward. Fair pricing and excellent customer service.',
+    //   service: 'Junk Removal',
+    //   date: 'January 2024'
+    // }
   ];
 
   const renderStars = (rating) => {
@@ -34,10 +35,12 @@ const TestimonialsPage = () => {
 
   return (
     <div className="testimonials-page">
-      <section className="page-header">
+        <section className="page-header"     style={{
+          backgroundImage: `linear-gradient(135deg, rgba(13, 59, 102, 0.9), rgba(13, 59, 102, 0.7)), url(${heroBg})`
+        }}>
         <div className="container">
-          <h1 className="section-title">Customer Testimonials</h1>
-          <p className="section-subtitle">
+          <h1 className="section-title" style={{color: 'white'}}>Customer Testimonials</h1>
+          <p className="section-subtitle" style={{color: 'white'}}>
             Hear what our satisfied customers have to say about our services
           </p>
         </div>
@@ -70,7 +73,7 @@ const TestimonialsPage = () => {
 
       <section className="additional-testimonials">
         <div className="container">
-          <h2 className="section-title">More Customer Stories</h2>
+          <h2 className="section-title">Corporate Clients</h2>
           <div className="testimonials-grid">
             {additionalTestimonials.map((testimonial, index) => (
               <div key={index} className="testimonial-card">
@@ -97,21 +100,21 @@ const TestimonialsPage = () => {
         <div className="container">
           <h2 className="section-title">Find Us On</h2>
           <div className="platforms-grid">
+              <a href={links.google} target="_blank" rel="noopener noreferrer">
             <div className="platform-item">
-              <i className="fab fa-google"></i>
+                <i className="fab fa-google"></i>
               <h4>Google Reviews</h4>
               <p>4.9/5 stars (800+ reviews)</p>
             </div>
+              </a>
+            <a href={links.facebook} target="_blank" rel="noopener noreferrer">
             <div className="platform-item">
-              <i className="fab fa-facebook"></i>
+              
+                <i className="fab fa-facebook"></i>
+              
               <h4>Facebook</h4>
               <p>4.8/5 stars (250+ reviews)</p>
-            </div>
-            <div className="platform-item">
-              <i className="fab fa-yelp"></i>
-              <h4>Yelp</h4>
-              <p>4.7/5 stars (150+ reviews)</p>
-            </div>
+            </div></a>
           </div>
         </div>
       </section>

@@ -3,8 +3,66 @@ import Services from '../components/Services';
 import WhyChooseUs from '../components/WhyChooseUs';
 import CTABanner from '../components/CTABanner';
 import heroBg from '../assets/hero-bg.jpg';
+import { pricingPlans, servicesDetails } from '../config';
 
 const ServicesPage = () => {
+  const deliverPricing = pricingPlans.find(service => service.id === 'delivery')?.startingPrice;
+  const movingPricing = pricingPlans.find(service => service.id === 'moving')?.startingPrice;
+  const junkRemovalPricing = pricingPlans.find(service => service.id === 'junk')?.startingPrice;
+
+
+
+  const getPricingForService = (serviceId) => {
+    switch(serviceId) {
+      case 'deliveries':
+        return deliverPricing;
+      case 'moving':
+        return movingPricing;
+      case 'junk-removal':
+        return junkRemovalPricing;
+      default:
+        return '';
+    }
+  };
+
+  const getPricingDetails = (serviceId) => {
+    switch(serviceId) {
+      case 'deliveries':
+        return {
+          startingText: `Starting at ${deliverPricing} for local deliveries`,
+          additionalCharges: [
+            'Same-day service',
+            'Fragile item handling',
+            'Long-distance deliveries',
+            'After-hours service'
+          ]
+        };
+      case 'moving':
+        return {
+          startingText: `Starting at ${movingPricing} for local moves`,
+          included: [
+            'Professional moving team',
+            'Packing materials',
+            'Furniture protection',
+            'Insurance coverage',
+            'Loading and unloading'
+          ]
+        };
+      case 'junk-removal':
+        return {
+          startingText: `Starting at ${junkRemovalPricing} for standard removal`,
+          basedOn: [
+            'Volume of items',
+            'Type of materials',
+            'Location and accessibility',
+            'Urgency of service'
+          ]
+        };
+      default:
+        return {};
+    }
+  };
+
   return (
     <div className="services-page">
       <section
@@ -20,219 +78,92 @@ const ServicesPage = () => {
           </p>
           
           <div className="service-navigation">
-            <a href="#deliveries" className="service-nav-link">
-              <i className="fas fa-truck"></i>
-              <span>Delivery Services</span>
-            </a>
-            <a href="#moving" className="service-nav-link">
-              <i className="fas fa-box"></i>
-              <span>Moving Services</span>
-            </a>
-            <a href="#junk-removal" className="service-nav-link">
-              <i className="fas fa-trash"></i>
-              <span>Junk Removal</span>
-            </a>
+            {servicesDetails.map(service => (
+              <a key={service.id} href={`#${service.id}`} className="service-nav-link">
+                <i className={service.icon}></i>
+                <span>{service.title}</span>
+              </a>
+            ))}
           </div>
         </div>
       </section>
       
       <CTABanner />
       
-      {/* Delivery Services Section */}
-      <section id="deliveries" className="service-section">
-        <div className="container">
-          <div className="service-section-header">
-            <div className="service-icon-large">
-              <i className="fas fa-truck"></i>
-            </div>
-            <h2>Delivery Services</h2>
-            <p>Fast, reliable delivery solutions for all your needs</p>
-          </div>
-          
-          <div className="service-content">
-            <div className="service-features">
-              <h3>What We Offer</h3>
-              <div className="features-grid">
-                <div className="feature-item">
-                  <i className="fas fa-clock"></i>
-                  <h4>Same-Day Delivery</h4>
-                  <p>Urgent deliveries completed within hours</p>
+      {servicesDetails.map(service => {
+        const pricingDetails = getPricingDetails(service.id);
+        
+        return (
+          <section key={service.id} id={service.id} className="service-section">
+            <div className="container">
+              <div className="service-section-header">
+                <div className="service-icon-large">
+                  <i className={service.icon}></i>
                 </div>
-                <div className="feature-item">
-                  <i className="fas fa-box"></i>
-                  <h4>Package Handling</h4>
-                  <p>Careful pickup and delivery of all package types</p>
+                <h2>{service.title}</h2>
+                <p>{service.description}</p>
+              </div>
+              
+              <div className="service-content">
+                <div className="service-features">
+                  <h3>{service.id === 'deliveries' ? 'What We Offer' : service.id === 'moving' ? 'Our Moving Services' : 'Junk Removal Services'}</h3>
+                  <div className="features-grid">
+                    {service.features.map((feature, index) => (
+                      <div key={index} className="feature-item">
+                        <i className={service.id === 'deliveries' ? 
+                          ['fas fa-clock', 'fas fa-box', 'fas fa-shield-alt', 'fas fa-map-marker-alt', 'fas fa-calendar-alt', 'fas fa-route'][index] :
+                          service.id === 'moving' ? 
+                          ['fas fa-home', 'fas fa-building', 'fas fa-boxes', 'fas fa-tools', 'fas fa-warehouse', 'fas fa-road'][index] :
+                          ['fas fa-house-user', 'fas fa-briefcase', 'fas fa-hammer', 'fas fa-leaf', 'fas fa-hand-holding-heart', 'fas fa-recycle'][index]
+                        }></i>
+                        <h4>{feature.title}</h4>
+                        <p>{feature.description}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div className="feature-item">
-                  <i className="fas fa-shield-alt"></i>
-                  <h4>Fragile Items</h4>
-                  <p>Specialized handling for delicate and valuable items</p>
-                </div>
-                <div className="feature-item">
-                  <i className="fas fa-map-marker-alt"></i>
-                  <h4>Real-Time Tracking</h4>
-                  <p>Track your delivery from pickup to destination</p>
-                </div>
-                <div className="feature-item">
-                  <i className="fas fa-calendar-alt"></i>
-                  <h4>Flexible Scheduling</h4>
-                  <p>Choose delivery times that work for you</p>
-                </div>
-                <div className="feature-item">
-                  <i className="fas fa-route"></i>
-                  <h4>Local & Regional</h4>
-                  <p>Coverage throughout the metro area and beyond</p>
+                
+                <div className="service-pricing" style={service.id === 'moving' ? {backgroundColor: 'white'} : {}}>
+                  <h3>Pricing</h3>
+                  <div className="pricing-info">
+                    <p><strong>{pricingDetails.startingText}</strong></p>
+                    {pricingDetails.additionalCharges && (
+                      <>
+                        <p>Additional charges may apply for:</p>
+                        <ul>
+                          {pricingDetails.additionalCharges.map((charge, index) => (
+                            <li key={index}>{charge}</li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
+                    {pricingDetails.included && (
+                      <>
+                        <p>Included in our service:</p>
+                        <ul>
+                          {pricingDetails.included.map((item, index) => (
+                            <li key={index}>{item}</li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
+                    {pricingDetails.basedOn && (
+                      <>
+                        <p>Pricing based on:</p>
+                        <ul>
+                          {pricingDetails.basedOn.map((item, index) => (
+                            <li key={index}>{item}</li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-            
-            <div className="service-pricing">
-              <h3>Pricing</h3>
-              <div className="pricing-info">
-                <p><strong>Starting at $25</strong> for local deliveries</p>
-                <p>Additional charges may apply for:</p>
-                <ul>
-                  <li>Same-day service</li>
-                  <li>Fragile item handling</li>
-                  <li>Long-distance deliveries</li>
-                  <li>After-hours service</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Moving Services Section */}
-      <section id="moving" className="service-section">
-        <div className="container">
-          <div className="service-section-header">
-            <div className="service-icon-large">
-              <i className="fas fa-box"></i>
-            </div>
-            <h2>Moving Services</h2>
-            <p>Professional moving solutions for residential and commercial needs</p>
-          </div>
-          
-          <div className="service-content">
-            <div className="service-features">
-              <h3>Our Moving Services</h3>
-              <div className="features-grid">
-                <div className="feature-item">
-                  <i className="fas fa-home"></i>
-                  <h4>Residential Moving</h4>
-                  <p>Complete home moving with care and precision</p>
-                </div>
-                <div className="feature-item">
-                  <i className="fas fa-building"></i>
-                  <h4>Commercial Moving</h4>
-                  <p>Office and business relocation services</p>
-                </div>
-                <div className="feature-item">
-                  <i className="fas fa-boxes"></i>
-                  <h4>Packing Services</h4>
-                  <p>Professional packing and unpacking assistance</p>
-                </div>
-                <div className="feature-item">
-                  <i className="fas fa-tools"></i>
-                  <h4>Furniture Assembly</h4>
-                  <p>Disassembly and reassembly of furniture</p>
-                </div>
-                <div className="feature-item">
-                  <i className="fas fa-warehouse"></i>
-                  <h4>Storage Solutions</h4>
-                  <p>Short and long-term storage options</p>
-                </div>
-                <div className="feature-item">
-                  <i className="fas fa-road"></i>
-                  <h4>Long-Distance</h4>
-                  <p>Cross-country and interstate moving</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="service-pricing">
-              <h3>Pricing</h3>
-              <div className="pricing-info">
-                <p><strong>Starting at $120</strong> for local moves</p>
-                <p>Included in our service:</p>
-                <ul>
-                  <li>Professional moving team</li>
-                  <li>Packing materials</li>
-                  <li>Furniture protection</li>
-                  <li>Insurance coverage</li>
-                  <li>Loading and unloading</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Junk Removal Section */}
-      <section id="junk-removal" className="service-section">
-        <div className="container">
-          <div className="service-section-header">
-            <div className="service-icon-large">
-              <i className="fas fa-trash"></i>
-            </div>
-            <h2>Junk Removal</h2>
-            <p>Efficient and eco-friendly disposal services</p>
-          </div>
-          
-          <div className="service-content">
-            <div className="service-features">
-              <h3>Junk Removal Services</h3>
-              <div className="features-grid">
-                <div className="feature-item">
-                  <i className="fas fa-house-user"></i>
-                  <h4>Household Cleanouts</h4>
-                  <p>Complete home decluttering and cleanup</p>
-                </div>
-                <div className="feature-item">
-                  <i className="fas fa-briefcase"></i>
-                  <h4>Office Cleanouts</h4>
-                  <p>Commercial space clearing and organization</p>
-                </div>
-                <div className="feature-item">
-                  <i className="fas fa-hammer"></i>
-                  <h4>Construction Debris</h4>
-                  <p>Removal of renovation and construction waste</p>
-                </div>
-                <div className="feature-item">
-                  <i className="fas fa-leaf"></i>
-                  <h4>Eco-Friendly Disposal</h4>
-                  <p>Responsible waste management and recycling</p>
-                </div>
-                <div className="feature-item">
-                  <i className="fas fa-hand-holding-heart"></i>
-                  <h4>Donation Services</h4>
-                  <p>Donate usable items to local charities</p>
-                </div>
-                <div className="feature-item">
-                  <i className="fas fa-recycle"></i>
-                  <h4>Recycling</h4>
-                  <p>Proper recycling of eligible materials</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="service-pricing">
-              <h3>Pricing</h3>
-              <div className="pricing-info">
-                <p><strong>Starting at $85</strong> for standard removal</p>
-                <p>Pricing based on:</p>
-                <ul>
-                  <li>Volume of items</li>
-                  <li>Type of materials</li>
-                  <li>Location and accessibility</li>
-                  <li>Urgency of service</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
+        );
+      })}
       
       <WhyChooseUs />
     </div>

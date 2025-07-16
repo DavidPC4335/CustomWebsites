@@ -3,41 +3,42 @@ import React from 'react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Sarah Johnson',
+      name: 'Alex Durington',
       rating: 5,
-      text: 'Youngsters Services made my move so much easier! The team was professional, punctual, and handled all my belongings with care. Highly recommend their moving services!',
+      text: 'Had a great experience with these guys. Very helpful, and super efficient! Would highly recommend the Youngsters crew!',
       service: 'Moving Services'
     },
     {
-      name: 'Mike Chen',
+      name: 'Luc Levesque',
       rating: 5,
-      text: 'Fast and reliable delivery service! They delivered my packages on time and kept me updated throughout the process. Will definitely use them again.',
+      text: 'Had a great experience with these guys. Very helpful, and super efficient! Would highly recommend the Youngsters crew!',
       service: 'Delivery Services'
     },
     {
-      name: 'Lisa Rodriguez',
+      name: 'Maja Zylkowski',
       rating: 5,
-      text: 'Great junk removal service! They cleared out my garage quickly and disposed of everything responsibly. The pricing was transparent and fair.',
+      text: 'Excellent service—fast, reliable, and professional. Highly recommended!!!',
       service: 'Junk Removal'
     },
     {
-      name: 'David Smith',
+      name: 'Joe Bruggeman',
       rating: 5,
-      text: 'Professional team and excellent customer service. They went above and beyond to ensure I was satisfied with their work. Five stars!',
-      service: 'Moving Services'
-    },
-    {
-      name: 'Emily Brown',
-      rating: 5,
-      text: 'Same-day service when I needed it most! Their delivery team was efficient and careful with my fragile items. Couldn\'t be happier!',
+      text: 'Thanks for delivering my treadmill! Very professional service and accommodated my needs to get it where it needed to be.',
       service: 'Delivery Services'
+    },  
+      {
+      name: 'M Z',
+      rating: 5,
+      text: 'Excellent service, very nice and helpful, very responsible what they do, I will recommend in a future just  YOUNGSTERS services and thank you',
+      service: 'Junk Removal'
     },
     {
-      name: 'Tom Wilson',
+      name: 'Calum MacKenzie',
       rating: 5,
-      text: 'Helped me declutter my entire house. The team was respectful, efficient, and made the whole process stress-free. Excellent value for money!',
-      service: 'Junk Removal'
+      text: 'Great guys, worked professionally and quickly, highly recommend! Thank you for your help!',
+      service: 'Delivery Services'
     }
+
   ];
 
   const renderStars = (rating) => {
@@ -47,7 +48,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="testimonials">
+    <section id="testimonials" className="testimonials" >
       <div className="container">
         <h2 className="section-title">What Our Customers Say</h2>
         <p className="section-subtitle">

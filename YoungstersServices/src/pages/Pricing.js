@@ -2,85 +2,10 @@ import React from 'react';
 import QuoteForm from '../components/QuoteForm';
 import heroBg from '../assets/hero-bg.jpg';
 import CTABanner from '../components/CTABanner';
+import { pricingPlans, faqs   } from '../config';
+
+
 const PricingPage = () => {
-  const pricingPlans = [
-    {
-      id: 'delivery',
-      title: 'Delivery Services',
-      icon: 'fas fa-truck',
-      startingPrice: '$25',
-      description: 'Fast, reliable delivery for all your needs',
-      features: [
-        'Same-day delivery available',
-        'Real-time tracking',
-        'Fragile item handling',
-        'Flexible scheduling',
-        'Professional drivers',
-        'Insurance coverage'
-      ],
-      popular: false
-    },
-    {
-      id: 'moving',
-      title: 'Moving Services',
-      icon: 'fas fa-box',
-      startingPrice: '$120',
-      description: 'Complete moving solutions for homes and offices',
-      features: [
-        'Professional moving team',
-        'Packing materials included',
-        'Furniture protection',
-        'Loading & unloading',
-        'Insurance coverage',
-        'Storage solutions'
-      ],
-      popular: true
-    },
-    {
-      id: 'junk',
-      title: 'Junk Removal',
-      icon: 'fas fa-trash',
-      startingPrice: '$85',
-      description: 'Eco-friendly junk removal and disposal',
-      features: [
-        'Eco-friendly disposal',
-        'Same-day service',
-        'No hidden fees',
-        'Donation & recycling',
-        'Heavy lifting included',
-        'Clean-up service'
-      ],
-      popular: false
-    }
-  ];
-
-  const faqs = [
-    {
-      question: 'How do you calculate pricing?',
-      answer: 'Our pricing is based on factors like distance, service type, time requirements, and any special handling needs. We provide transparent quotes with no hidden fees.'
-    },
-    {
-      question: 'Are there any additional fees?',
-      answer: 'No hidden fees! Our quotes include all standard services. Additional charges may apply for special requests or services outside normal business hours.'
-    },
-    {
-      question: 'Do you offer discounts?',
-      answer: 'Yes! We offer discounts for recurring customers, bulk services, and seasonal promotions. Check our current offers when requesting a quote.'
-    },
-    {
-      question: 'What payment methods do you accept?',
-      answer: 'We accept cash, credit cards, debit cards, and digital payment methods. Payment is typically due upon completion of service.'
-    },
-    {
-      question: 'How quickly can you provide service?',
-      answer: 'Most services can be scheduled within 24-48 hours. Same-day service is available for urgent requests with an additional fee.'
-    },
-    {
-      question: 'Do you provide free estimates?',
-      answer: 'Yes! We provide free, no-obligation estimates for all our services. Use our quote calculator or contact us directly.'
-    }
-  ];
-
   return (
     <div className="pricing-page">
       {/* Hero Section */}
@@ -128,11 +53,11 @@ const PricingPage = () => {
             {pricingPlans.map((plan) => (
               <div key={plan.id} className={`pricing-card ${plan.popular ? 'popular' : ''}`}>
                 {plan.popular && <div className="popular-badge">Most Popular</div>}
-                
-                <div className="card-header">
-                  <div className="service-icon">
+                <div className="service-icon" style={{color: 'red'}}>
                     <i className={plan.icon}></i>
                   </div>
+                <div className="card-header">
+                 
                   <h3 className="service-title">{plan.title}</h3>
                   <p className="service-description">{plan.description}</p>
                 </div>
@@ -171,43 +96,8 @@ const PricingPage = () => {
       {/* Quote Calculator Section */}
       <section id="quote-calculator" className="quote-section">
         <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Get Your Free Quote</h2>
-            <p className="section-subtitle">
-              Fill out the form below to receive an instant estimate for your service needs.
-            </p>
-          </div>
-          
-          <div className="quote-calculator">
-            <QuoteForm title="Calculate Your Quote" />
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="pricing-faq">
-        <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Frequently Asked Questions</h2>
-            <p className="section-subtitle">
-              Everything you need to know about our pricing and services.
-            </p>
-          </div>
-          
-          <div className="faq-grid">
-            {faqs.map((faq, index) => (
-              <div key={index} className="faq-item">
-                <div className="faq-question">
-                  <i className="fas fa-question-circle"></i>
-                  <h4>{faq.question}</h4>
-                </div>
-                <div className="faq-answer">
-                  <p>{faq.answer}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+       <QuoteForm />
+       </div>
       </section>
     </div>
   );

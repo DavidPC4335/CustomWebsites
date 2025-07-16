@@ -1,14 +1,19 @@
 import React from 'react';
 import WhyChooseUs from '../components/WhyChooseUs';
-
+import heroBg from '../assets/hero-bg.jpg';
 const About = () => {
   return (
     <div className="about-page">
-      <section className="page-header">
+      <section 
+        className="page-header"
+        style={{
+          backgroundImage: `linear-gradient(135deg, rgba(13, 59, 102, 0.9), rgba(13, 59, 102, 0.7)), url(${heroBg})`
+        }}
+      >
         <div className="container">
-          <h1 className="section-title">About Youngsters Services</h1>
-          <p className="section-subtitle">
-            Your trusted partner for reliable delivery, moving, and junk removal services
+          <h1 className="section-title" style={{color: 'white'}}>Our Mission</h1>
+          <p className="section-subtitle" style={{color: 'white'}}>
+            Your trusted partner for friendly and reliable services.
           </p>
         </div>
       </section>
@@ -19,10 +24,7 @@ const About = () => {
             <div className="about-text">
               <h2>Our Story</h2>
               <p>
-                Founded with a vision to provide fast, reliable, and affordable services, 
-                Youngsters Services has been serving our community for over a decade. 
-                We understand that moving, deliveries, and junk removal can be stressful, 
-                which is why we're committed to making these experiences as smooth as possible.
+                What started as an idea between our two founders Daniel and Matt, has grown into a successful business that has been serving our community since 2024.
               </p>
               <p>
                 Our team of experienced professionals takes pride in delivering exceptional 
@@ -34,20 +36,20 @@ const About = () => {
             
             <div className="about-stats">
               <div className="stat-item">
-                <h3>10+</h3>
-                <p>Years of Experience</p>
+                <h3>5.0</h3>
+                <p>Average Rating</p>
               </div>
               <div className="stat-item">
-                <h3>5000+</h3>
+                <h3>500+</h3>
                 <p>Happy Customers</p>
               </div>
               <div className="stat-item">
-                <h3>50+</h3>
-                <p>Team Members</p>
+                <h3>5+</h3>
+                <p>Corporate Clients</p>
               </div>
               <div className="stat-item">
                 <h3>24/7</h3>
-                <p>Customer Support</p>
+                <p>Emergency Support</p>
               </div>
             </div>
           </div>
@@ -69,8 +71,7 @@ const About = () => {
             <div className="vision">
               <h3>Our Vision</h3>
               <p>
-                To become the most trusted and reliable service provider in our 
-                community, known for our commitment to customer satisfaction and 
+                To become the most trusted and reliable service provider in Guelph and surrounding communities, known for our commitment to customer satisfaction and 
                 environmental responsibility.
               </p>
             </div>

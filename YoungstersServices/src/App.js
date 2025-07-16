@@ -8,7 +8,6 @@ import About from './pages/About';
 import PricingPage from './pages/Pricing';
 import TestimonialsPage from './pages/Testimonials';
 import Contact from './pages/Contact';
-import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
             <Route path="/pricing" element={<PricingPage />} />
             <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
