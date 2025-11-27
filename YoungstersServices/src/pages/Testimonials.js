@@ -1,6 +1,6 @@
 import React from 'react';
 import Testimonials from '../components/Testimonials';
-import heroBg from '../assets/hero-bg.jpg';
+import heroBg from '../assets/hero-bg.png';
 import { links } from '../config';
 const TestimonialsPage = () => {
   const additionalTestimonials = [

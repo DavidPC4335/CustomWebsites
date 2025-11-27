@@ -1,7 +1,7 @@
 import React from 'react';
 import QuoteForm from '../components/QuoteForm';
-import heroBg from '../assets/hero-bg.jpg';
-import CTABanner from '../components/CTABanner';
+import heroBg from '../assets/hero-bg.png';
+// import CTABanner from '../components/CTABanner';
 import { pricingPlans, faqs   } from '../config';
 
 
@@ -38,7 +38,7 @@ const PricingPage = () => {
           </div>
         </div>
       </section>
-      <CTABanner />
+      {/* <CTABanner /> */}
       {/* Pricing Cards Section */}
       <section className="pricing-plans">
         <div className="container">

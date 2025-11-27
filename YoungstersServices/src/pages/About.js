@@ -1,6 +1,6 @@
 import React from 'react';
 import WhyChooseUs from '../components/WhyChooseUs';
-import heroBg from '../assets/hero-bg.jpg';
+import heroBg from '../assets/hero-bg.png';
 const About = () => {
   return (
     <div className="about-page">

@@ -1,8 +1,8 @@
 import React from 'react';
 import Services from '../components/Services';
 import WhyChooseUs from '../components/WhyChooseUs';
-import CTABanner from '../components/CTABanner';
-import heroBg from '../assets/hero-bg.jpg';
+// import CTABanner from '../components/CTABanner';
+import heroBg from '../assets/hero-bg.png';
 import { pricingPlans, servicesDetails } from '../config';
 
 const ServicesPage = () => {
@@ -88,7 +88,7 @@ const ServicesPage = () => {
         </div>
       </section>
       
-      <CTABanner />
+      {/* <CTABanner /> */}
       
       {servicesDetails.map(service => {
         const pricingDetails = getPricingDetails(service.id);
