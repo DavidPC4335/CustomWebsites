@@ -2,11 +2,13 @@ import React from 'react';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import Summer25Report from './Summer25Report';
 import Summer24Report from './Summer2024Report';
+import Fall25Report from './Fall25Report';
 import { useLocation, Navigate } from 'react-router-dom';
 
 const links = [
-  { to: '/work-term-reports/summer-2024', label: 'BV/Joynd S24', component: <Summer24Report /> },
-  { to: '/work-term-reports/summer-2025', label: 'Intellicampus S25', component: <Summer25Report /> },
+  { to: '/work-term-reports/fall-2025', label: 'Milch & Zucker GmbH', component: <Fall25Report /> ,logoUrl: '/images/icons/muzLogo.jpg'},
+  { to: '/work-term-reports/summer-2025', label: 'Intellicampus LLC', component: <Summer25Report /> ,logoUrl: '/images/icons/intellicampusLogo.jpg'},
+  { to: '/work-term-reports/summer-2024', label: 'Barfoot Ventures / Joynd LLC', component: <Summer24Report /> ,logoUrl: '/images/icons/joyndLogo.png'},
 //   { to: '/work-term-reports/winter-2025', label: 'Winter 2025', component: <Summer25Report /> }
 ];
 const WorkTermReportsIndex: React.FC = () => {

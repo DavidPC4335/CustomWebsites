@@ -5,6 +5,7 @@ export interface SidebarLink {
   to: string;
   label: string;
   badgeText?: string;
+  logoUrl?: string;
 }
 
 interface SidebarProps {
@@ -32,7 +33,7 @@ const Sidebar: React.FC<SidebarProps> = ({ title = 'Navigate', links }) => {
         <h3 className="sidebar__title">{title}</h3>
         <ul className="sidebar__list">
           {links.map(link => (
-            <SidebarButton key={link.to} to={link.to} label={link.label} badgeText={link.badgeText} onClick={close} />
+            <SidebarButton key={link.to} to={link.to} label={link.label} badgeText={link.badgeText} onClick={close} logoUrl={link.logoUrl} />
           ))}
         </ul>
       </aside>

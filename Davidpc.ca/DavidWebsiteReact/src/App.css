@@ -52,13 +52,38 @@
 .sidebar__button {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: var(--spacing-sm) var(--spacing-md);
+  justify-content: flex-start;
+  gap: var(--spacing-sm);
+  --sidebar-button-height: 56px;
+  min-height: var(--sidebar-button-height);
+  padding: var(--spacing-sm) var(--spacing-sm);
   border: var(--border-width) var(--border-style) transparent;
   background-color: white;
   color: var(--text-primary);
   box-shadow: 2px 2px 0 var(--shadow-color);
   transition: all var(--transition-fast);
+}
+
+.sidebar .sidebar__button .sidebar__logo {
+  height: calc(var(--sidebar-button-height) - 12px);
+  padding: 0px 0;
+}
+
+.sidebar__logo {
+  height: auto;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+  object-fit: contain;
+  border: 1px solid var(--border-color);
+}
+
+.sidebar__badge {
+  margin-left: auto;
+}
+
+.sidebar__logo {
+  border-radius: 25%;
 }
 
 .sidebar__button:hover {
@@ -122,6 +147,10 @@
     right: var(--spacing-md);
     bottom: var(--spacing-md);
     z-index: 1003;
+  }
+
+  .sidebar__button {
+    --sidebar-button-height: 52px;
   }
 
   .sidebar__overlay {
@@ -1599,6 +1628,10 @@
 }
 
 @media screen and (max-width: 480px) {
+  .sidebar__button {
+    --sidebar-button-height: 48px;
+  }
+
   /* Projects page: tighter padding and smaller text on phones */
   .project__header { padding: var(--spacing-lg) var(--spacing-md); }
   .project__header h1 { font-size: 2rem; }
@@ -1944,7 +1977,7 @@
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: var(--spacing-xl);
-  padding: var(--spacing-xxl);
+  padding: var(--spacing-lg);
   align-items: center;
   transition: all var(--transition-medium);
 }
@@ -1964,10 +1997,10 @@
 }
 
 .report__image img {
-  width: 100%;
+  width:  100%;
   height: auto;
   border: var(--border-width) var(--border-style) var(--border-color);
-  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+  /* box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color); */
 }
 
 .report__pair--reverse {
@@ -1990,4 +2023,88 @@
     padding: var(--spacing-xs);
     gap: var(--spacing-sm);
   }
+}
+
+/* ============= IMAGE EXPAND (LIGHTBOX) ============= */
+.image-expand__button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: zoom-in;
+  display: block;
+  width: 100%;
+  text-align: inherit;
+  box-shadow: none;
+  position: relative;
+}
+
+.image-expand__button img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-expand__hint {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  background-color: var(--accent-color);
+  color: #fff;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  border: var(--border-width) var(--border-style) var(--border-color);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+}
+
+.image-expand__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+  cursor: zoom-out;
+}
+
+.image-expand__dialog {
+  position: relative;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-expand__dialog img {
+  display: block;
+  max-width: calc(100vw - (2 * var(--border-width)));
+  max-height: calc(100vh - (2 * var(--border-width)));
+  width: auto;
+  height: auto;
+  border: var(--border-width) var(--border-style) var(--border-color);
+}
+
+.image-expand__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  line-height: 1;
+  padding: 6px 10px;
+  background-color: var(--text-primary);
+  color: #fff;
+  border: var(--border-width) var(--border-style) var(--border-color);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+}
+
+.image-expand__close:hover {
+  transform: translate(var(--shadow-hover-offset), var(--shadow-hover-offset));
+  box-shadow: var(--shadow-hover-offset) var(--shadow-hover-offset) 0 var(--shadow-color);
 }

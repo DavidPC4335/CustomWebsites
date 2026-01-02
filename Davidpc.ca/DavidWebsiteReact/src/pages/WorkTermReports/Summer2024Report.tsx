@@ -1,5 +1,6 @@
 import React from 'react';
 import { Gap } from '.';
+import ExpandableImage from '../../components/ExpandableImage';
 
 const Summer2024Report: React.FC = () => {
   return (
@@ -50,13 +51,13 @@ const Summer2024Report: React.FC = () => {
               </p>
             </div>
             <div className="report__image">
-              <img src="/images/velocitycreds1.png" alt="Credential issuance form" />
+              <ExpandableImage src="/images/velocitycreds1.png" alt="Credential issuance form" />
             </div>
           </div>
 
           <div className="report__pair report__pair--reverse">
             <div className="report__image">
-              <img src="/images/velocitycreds2.png" alt="Dashboard and credential offers" />
+              <ExpandableImage src="/images/velocitycreds2.png" alt="Dashboard and credential offers" />
             </div>
             <div className="report__text">
               <h3>Issuer Dashboard</h3>
@@ -78,13 +79,13 @@ const Summer2024Report: React.FC = () => {
               </p>
             </div>
             <div className="report__image">
-              <img src="/images/velocitycreds3.png" alt="Disclosure verification details" />
+              <ExpandableImage src="/images/velocitycreds3.png" alt="Disclosure verification details" />
             </div>
           </div>
 
           <div className="report__pair report__pair--reverse">
             <div className="report__image">
-              <img src="/images/velocitycreds4.png" alt="End-to-end flows collage" />
+              <ExpandableImage src="/images/velocitycreds4.png" alt="End-to-end flows collage" />
             </div>
             <div className="report__text">
               <h3>Polish, Auth, and Ops</h3>

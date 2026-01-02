@@ -1,5 +1,6 @@
 import React from 'react';
 import { Gap } from '.';
+import ExpandableImage from '../../components/ExpandableImage';
 import CredentialEngine from '../../assets/WorkReports/credeng-finder.png';
 import LandingPage from '../../assets/WorkReports/landing-page.png';
 import Matcher from '../../assets/WorkReports/matcher.png';
@@ -45,13 +46,13 @@ const Summer25Report: React.FC = () => {
               </p>
             </div>
             <div className="report__image">
-              <img src={CredentialEngine} alt="Credential Engine Integration" />
+              <ExpandableImage src={CredentialEngine} alt="Credential Engine Integration" />
             </div>
           </div>
 
           <div className="report__pair report__pair--reverse">
             <div className="report__image">
-                <img src={LandingPage} alt="Landing Page" />
+                <ExpandableImage src={LandingPage} alt="Landing Page" />
                 </div>
             <div className="report__text">
               <h3>Student Landing Page</h3>
@@ -76,14 +77,14 @@ const Summer25Report: React.FC = () => {
               </p>
             </div>
             <div className="report__image">
-              <img src="/images/rag.gif" alt="RAG prototype demo" />
+              <ExpandableImage src="/images/rag.gif" alt="RAG prototype demo" />
             </div>
           </div>
           <Gap height="1rem" />
         </div>
         <div className="report__pair report__pair--reverse">
             <div className="report__image">
-                <img src={Matcher} alt="Matcher" />
+                <ExpandableImage src={Matcher} alt="Matcher" />
                 </div>
             <div className="report__text">
               <h3>AI Scholarship Matcher</h3>
