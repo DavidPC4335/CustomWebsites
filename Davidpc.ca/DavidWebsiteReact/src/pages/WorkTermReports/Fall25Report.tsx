@@ -88,13 +88,19 @@ a single source. Currently, they employ around 150 people at their two locations
       <h3>Goals & Learning Outcomes</h3>
         <Gap height="1rem" />
         <p>
-          I aimed to strengthen my applied AI engineering skills—from problem framing and data preparation to model evaluation and integration—within a production‑oriented HR tech context. I also wanted to grow my ability to communicate with cross‑functional partners and to deliver measurable improvements to user workflows.
+          My primairy goal was to strengthen my applied software engineering skills. This included design and architecture discussions, as well as the implementation of the features. I wanted to improve my ability to write professinal, maintainable and production-ready code.
+          My secondary goal for the work term was being able to integrate well with an international team and to learn about the culture and expectations of a German company.
+          Overall, my goal was to become a more well‑rounded software engineer and collaborator, with a clearer understanding of how to build reliable software features that create value for end users.
+        
+          Throuought my internship I was able to work with some of the existing systems and framworks from the company as well as develop seperate microservices that interact with other aspects of the platform.
 
-          I participated in design reviews and demos, translated qualitative feedback into quantitative evaluation criteria, and learned to balance accuracy, latency, and maintainability when shipping AI features.
+          During my development of the Candidate Managment AI Agent I was able to build using Pydantic AI, Pydantic and FastAPI. This allowed me to use the latest and greatest features of the library to build a robust and scalable agent, as well as well documented and testable APIs.
+        
+          Overall, I would say that I was extremely successful in forwarding and working towards my goals. I completed 3 very well made and well recieved projects and some that were even included in the latest release. I have recieved a very nice reference from my employer as well as the potential to work further with them in the future.
 
-          Working in Germany with an international team improved my collaboration skills across languages and time zones, and gave me practical exposure to domain considerations specific to HR and recruiting.
+          I would say that I have also integrated well with the working culture although my german still leaves something to be desired! I would say that my biggest difference from a local worker would be the language but outside of that I would say that I fit in well.
 
-          Overall, I became a more well‑rounded AI engineer and collaborator, with a clearer understanding of how to build reliable AI features that create value for end users.
+          I'm very grateful to be able to have worked and learned from such great people as well as do a semester abroad. I fell that I have improved both my social and technical abilities as well as my ability to work in a team.
         </p>
       </section>
       <section className="report__section">

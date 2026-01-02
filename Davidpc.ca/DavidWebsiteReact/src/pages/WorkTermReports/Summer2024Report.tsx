@@ -8,6 +8,7 @@ const Summer2024Report: React.FC = () => {
       <h1>Barfoot Ventures / Joynd LLC</h1>
       <h3>Software Engineering — Verifiable Credentials</h3>
       <h3>May 2024 - August 2024</h3>
+      <h6>Waterloo, Ontario | Remote</h6>
       <Gap />
 
       <section>

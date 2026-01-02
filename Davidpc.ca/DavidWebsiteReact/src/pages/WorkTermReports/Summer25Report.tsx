@@ -11,6 +11,7 @@ const Summer25Report: React.FC = () => {
       <h1>Summer Placement at Intellicampus</h1>
       <h3>Software Engineering I.C</h3>
       <h3>May 2025 - August 2025</h3>
+      <h6>Miami, Florida | Remote</h6>
       <Gap />
       <section>
         <h3>Overview</h3>
