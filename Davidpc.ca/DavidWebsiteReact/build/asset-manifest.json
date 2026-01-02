@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.8ad5c1fa.css",
+    "main.js": "/static/js/main.b297387a.js",
+    "static/media/credeng-finder.png": "/static/media/credeng-finder.a1ea52bce89e138d8fb4.png",
+    "static/media/landing-page.png": "/static/media/landing-page.fe81156cddb0c19dc6fd.png",
+    "static/media/matcher.png": "/static/media/matcher.ff536e167e50893f9113.png",
+    "index.html": "/index.html",
+    "main.8ad5c1fa.css.map": "/static/css/main.8ad5c1fa.css.map",
+    "main.b297387a.js.map": "/static/js/main.b297387a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ad5c1fa.css",
+    "static/js/main.b297387a.js"
+  ]
+}
