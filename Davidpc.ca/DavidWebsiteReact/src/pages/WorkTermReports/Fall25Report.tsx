@@ -33,7 +33,14 @@ a single source. Currently, they employ around 150 people at their two locations
           <a href="https://www.milchundzucker.de" target="_blank" rel="noopener noreferrer">on their website</a>.
         </p>
       </section>
-
+      <section>
+        <h3>About the Role</h3>
+        <Gap height="1rem" />
+        <p>
+         My core responsibility for the internship was to develop and integrate a microservice that allows the ingestion of Velocity Network verifiable credentials into the platform.
+         Thanks to support from the team and a speedy onboarding I was able to complete the service and demo it to the team and stakeholders. While waiting for the service to added to the roadmap, I was locky enough to work on development for other services that our team was responsible for.
+         </p>
+      </section>
       <section>
         <h2>Developed Prototypes & AI Integrations</h2>
         <Gap />
@@ -54,7 +61,7 @@ a single source. Currently, they employ around 150 people at their two locations
 
           <div className="report__pair report__pair--reverse">
             <div className="report__image">
-              <ExpandableImage src="/images/fall25/VelocityIntegration.jpeg" alt="Integrated AI assistant for job ad creation" />
+              <ExpandableImage src="/images/fall25/velocityIntegration.jpeg" alt="Integrated AI assistant for job ad creation" />
             </div>
             <div className="report__text">
               <h3>Verifiable Credentials Integration</h3>
@@ -71,7 +78,7 @@ a single source. Currently, they employ around 150 people at their two locations
             <div className="report__text">
               <h3>Centralized AI management console</h3>
               <p>
-                The AI team at MuZ has many microservices that are used throuought the platform. These need to be individually managed and configured for each company by our internal staff. 
+                The AI team at MuZ has many microservices that are used throughout the platform. These need to be individually managed and configured for each company by our internal staff. 
                 Because of this I created a centralized management console that allows for the management of all the microservices and their configurations. This Vue with typescript application 
                 is hosted internally and used to manage the various AI agents and tools provided by the team.
               </p>
@@ -88,11 +95,11 @@ a single source. Currently, they employ around 150 people at their two locations
       <h3>Goals & Learning Outcomes</h3>
         <Gap height="1rem" />
         <p>
-          My primairy goal was to strengthen my applied software engineering skills. This included design and architecture discussions, as well as the implementation of the features. I wanted to improve my ability to write professinal, maintainable and production-ready code.
+          My primairy goal was to strengthen my applied software engineering skills. This included design and architecture discussions, as well as the implementation of the features that were requested by managment. I wanted to improve my ability to write professinal, maintainable and production-ready code.
           My secondary goal for the work term was being able to integrate well with an international team and to learn about the culture and expectations of a German company.
           Overall, my goal was to become a more well‑rounded software engineer and collaborator, with a clearer understanding of how to build reliable software features that create value for end users.
         
-          Throuought my internship I was able to work with some of the existing systems and framworks from the company as well as develop seperate microservices that interact with other aspects of the platform.
+          Throughout my internship I was able to work with some of the existing systems and frameworks from the company as well as develop separate microservices that interact with other aspects of the platform.
 
           During my development of the Candidate Managment AI Agent I was able to build using Pydantic AI, Pydantic and FastAPI. This allowed me to use the latest and greatest features of the library to build a robust and scalable agent, as well as well documented and testable APIs.
         
@@ -107,23 +114,23 @@ a single source. Currently, they employ around 150 people at their two locations
         <h3>Reflection</h3>
         <Gap height="1rem" />
         <p >
-          My experience at Milch und Zucker was both rewarding and formative. I deepened my understanding of the AI product lifecycle—scoping problems, building prototypes, running evaluations, and planning integrations. Collaborating with engineers, product managers, and domain experts taught me the importance of clarity, iteration, and user‑centric design in shipping effective AI features.
-
-          I appreciated the culture of experimentation that encouraged initiative and careful measurement. Being entrusted with meaningful work that will inform product decisions was motivating and taught me to balance innovation with robustness and maintainability.
-
-          I also gained hands‑on experience with modern LLM tooling and evaluation methods, and learned how to adapt models and prompts to the specific constraints of HR technology and European data/privacy expectations.
-
-          Overall, I completed what I set out to do: contribute meaningfully, improve my skills, and learn a great deal about building AI features in a real product environment.
-            </p>
+      Reflecting on my original goals for this work term, I am proud to say that I was able to complete the vast majority of what I set out to achieve. 
+      My primary goal was to strengthen my applied software engineering skills, particularly around designing, implementing, and shipping robust production-ready code.
+       I was able to work on a variety of challenging projects. This includes the Candidate Management AI Agent, the verifiable credentials microservice, 
+       and the centralized AI management console. Each of these projects required a range of technical and architectural skills. 
+       Through these projects,I gained significant experience working with modern frameworks (such as FastAPI and Pydantic AI), integrating new pieces into existing systems, 
+        and improving my ability to collaborate in a professional, international team setting. I am so thankful to be able to have worked with such great people and to have been able to grow as a person and as an AI engineer.
+      </p>
       </section>
       <Gap height="4rem" />
       <section className="report__section">
         <h3>Conclusion</h3>
         <Gap height="1rem" />
         <p>
-            This placement in Germany was a valuable opportunity to grow as an AI engineer, collaborate with an international team, and contribute to impactful HR technology.
+            This placement in Germany was a valuable opportunity to grow as and develop both as a person and as an AI engineer. This work term allowed me to collaborate across teams and cultures, and contribute to a product that is used by both candidates and recruiters across industries.
 
-          I plan to build on these experiences and continue improving my skills while contributing to AI features that help both candidates and recruiters.
+          I plan to build on these experiences and continue improving my skills while contributing to AI features that create a positive impact in peoples lives. I would also like to make a special
+           acknowledgement to my managers and colleagues at Milch und Zucker for their support and guidance.
         </p>
       </section>
     </div>

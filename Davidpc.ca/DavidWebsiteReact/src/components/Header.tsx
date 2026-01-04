@@ -30,17 +30,18 @@ const Header: React.FC = () => {
               <Link to="/" className="navbar__links" onClick={closeMenu}>Home</Link>
             </li>
             <li className="navbar__item">
+              <Link to="/work-term-reports" className="navbar__links" onClick={closeMenu}>Work Reports</Link>
+            </li>
+            <li className="navbar__item">
               <Link to="/projects" className="navbar__links" onClick={closeMenu}>Projects</Link>
             </li>
             <li className="navbar__item">
               <Link to="/resume" className="navbar__links" onClick={closeMenu}>Resume</Link>
             </li>
-            <li className="navbar__item">
+            {/* <li className="navbar__item">
               <Link to="/about" className="navbar__links" onClick={closeMenu}>About</Link>
-            </li>
-            <li className="navbar__item">
-              <Link to="/work-term-reports" className="navbar__links" onClick={closeMenu}>Work Reports</Link>
-            </li>
+            </li> */}
+           
             <li className="navbar__btn">
               <Link to="/contact" className="button" onClick={closeMenu}>Contact me</Link>
             </li>

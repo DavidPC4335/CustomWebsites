@@ -27,9 +27,9 @@
   position: sticky;
   top: 100px;
   align-self: start;
-  background-color: var(--content-bg);
+  background-color: var(--content-bg-secondary);
   border: var(--border-width) var(--border-style) var(--border-color);
-  box-shadow: var(--shadow-offset) var(--shadow-offset) 0 var(--shadow-color);
+  box-shadow: none;
   padding: var(--spacing-lg);
   width: 280px;
   height: 90vh;
@@ -320,12 +320,17 @@
   display: grid;
   width: 100%;
   grid-template-columns: 280px minmax(0, 1fr);
-  gap: var(--spacing-xxl);
+  gap: 0;
   align-items: start;
 }
 
 .layout--sidebar__content {
   min-width: 0;
+}
+
+/* Remove extra top spacing so main content aligns with sticky sidebar */
+.layout--sidebar__content .project {
+  margin: 0;
 }
 
 @media screen and (max-width: 992px) {
@@ -335,6 +340,12 @@
 
   .layout--sidebar__grid {
     display: block;
+    gap: var(--spacing-md);
+  }
+
+  /* Restore comfortable spacing on mobile */
+  .layout--sidebar__content .project {
+    margin: var(--spacing-md);
   }
 }
 
