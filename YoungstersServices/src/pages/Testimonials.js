@@ -1,6 +1,6 @@
 import React from 'react';
 import Testimonials from '../components/Testimonials';
-import heroBg from '../assets/hero-bg.png';
+import bg3 from '../assets/bg-3.png';
 import { links } from '../config';
 const TestimonialsPage = () => {
   const additionalTestimonials = [
@@ -35,11 +35,11 @@ const TestimonialsPage = () => {
 
   return (
     <div className="testimonials-page">
-        <section className="page-header"     style={{
-          backgroundImage: `linear-gradient(135deg, rgba(13, 59, 102, 0.9), rgba(13, 59, 102, 0.7)), url(${heroBg})`
+        <section className="page-header" style={{
+          backgroundImage: `linear-gradient(135deg, rgba(26, 26, 27, 0.88), rgba(37, 37, 38, 0.82)), url(${bg3})`
         }}>
         <div className="container">
-          <h1 className="section-title" style={{color: 'white'}}>Customer Testimonials</h1>
+          <h1 className="section-title">Customer Testimonials</h1>
           <p className="section-subtitle" style={{color: 'white'}}>
             Hear what our satisfied customers have to say about our services
           </p>
@@ -104,7 +104,7 @@ const TestimonialsPage = () => {
             <div className="platform-item">
                 <i className="fab fa-google"></i>
               <h4>Google Reviews</h4>
-              <p>4.9/5 stars (800+ reviews)</p>
+              <p>4.9/5 stars (25+ reviews)</p>
             </div>
               </a>
             <a href={links.facebook} target="_blank" rel="noopener noreferrer">
@@ -113,7 +113,7 @@ const TestimonialsPage = () => {
                 <i className="fab fa-facebook"></i>
               
               <h4>Facebook</h4>
-              <p>4.8/5 stars (250+ reviews)</p>
+              <p>Highly recommended</p>
             </div></a>
           </div>
         </div>

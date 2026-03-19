@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import heroBg from '../assets/hero-bg.png';
+import { contact } from '../config';
 
 const Hero = () => {
   return (
@@ -12,9 +13,9 @@ const Hero = () => {
           <Link to="/contact" className="btn btn-primary btn-large">
             Get a Free Quote
           </Link>
-          <a href="tel:+12267670630" className="btn btn-secondary">
-                  Call Now: (226) 767-0630
-                </a>
+          <a href={`tel:${contact.phoneTel}`} className="btn btn-secondary">
+            Call Now: {contact.phoneDisplay}
+          </a>
         </div>
       </div>
     </section>

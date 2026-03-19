@@ -57,6 +57,7 @@ const QuoteForm = ({ title = "Request Your Quote" }) => {
               <option value="delivery">Delivery Services</option>
               <option value="moving">Moving Services</option>
               <option value="junk-removal">Junk Removal</option>
+              <option value="staging">Real Estate Staging</option>
               <option value="other">Other</option>
             </select>
           </div>

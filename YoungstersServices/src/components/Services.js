@@ -23,6 +23,13 @@ const Services = () => {
       description: 'Efficient junk removal and disposal services. We help you declutter your space responsibly with eco-friendly disposal methods.',
       link: '/services',
       id: 'junk-removal'
+    },
+    {
+      icon: 'fas fa-couch',
+      title: 'Real Estate Staging',
+      description: 'Professional home staging services to showcase your property at its best and help it sell faster at a higher price.',
+      link: '/services',
+      id: 'staging'
     }
   ];
 

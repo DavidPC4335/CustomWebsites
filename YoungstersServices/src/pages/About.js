@@ -1,18 +1,18 @@
 import React from 'react';
 import WhyChooseUs from '../components/WhyChooseUs';
-import heroBg from '../assets/hero-bg.png';
+import secondaryBg from '../assets/secondary-bg.png';
 const About = () => {
   return (
     <div className="about-page">
       <section 
         className="page-header"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(13, 59, 102, 0.9), rgba(13, 59, 102, 0.7)), url(${heroBg})`
+          backgroundImage: `linear-gradient(135deg, rgba(26, 26, 27, 0.88), rgba(37, 37, 38, 0.82)), url(${secondaryBg})`
         }}
       >
         <div className="container">
-          <h1 className="section-title" style={{color: 'white'}}>Our Mission</h1>
-          <p className="section-subtitle" style={{color: 'white'}}>
+          <h1 className="section-title">Our Mission</h1>
+          <p className="section-subtitle">
             Your trusted partner for friendly and reliable services.
           </p>
         </div>

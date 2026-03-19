@@ -1,5 +1,5 @@
 import React from 'react';
-import { links } from '../config';
+import { links, contact } from '../config';
 const Footer = () => {
   return (
     <footer id="contact" className="footer">
@@ -8,8 +8,8 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Contact Information</h4>
             <p>
-              <a href="tel:+12267670630">
-              <i className="fas fa-phone"></i> (226) 767-0630
+              <a href={`tel:${contact.phoneTel}`}>
+                <i className="fas fa-phone"></i> {contact.phoneDisplay}
               </a>
             </p>
             <p>
@@ -28,6 +28,7 @@ const Footer = () => {
             <p><a href="/services">Delivery Services</a></p>
             <p><a href="/services">Moving Services</a></p>
             <p><a href="/services">Junk Removal</a></p>
+            <p><a href="/services#staging">Real Estate Staging</a></p>
             <p><a href="/contact">Get a Quote</a></p>
           </div>
 {/* 

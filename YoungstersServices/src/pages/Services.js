@@ -2,13 +2,14 @@ import React from 'react';
 import Services from '../components/Services';
 import WhyChooseUs from '../components/WhyChooseUs';
 // import CTABanner from '../components/CTABanner';
-import heroBg from '../assets/hero-bg.png';
+import bg3 from '../assets/bg-3.png';
 import { pricingPlans, servicesDetails } from '../config';
 
 const ServicesPage = () => {
   const deliverPricing = pricingPlans.find(service => service.id === 'delivery')?.startingPrice;
   const movingPricing = pricingPlans.find(service => service.id === 'moving')?.startingPrice;
   const junkRemovalPricing = pricingPlans.find(service => service.id === 'junk')?.startingPrice;
+  const stagingPricing = pricingPlans.find(service => service.id === 'staging')?.startingPrice;
 
 
 
@@ -20,6 +21,8 @@ const ServicesPage = () => {
         return movingPricing;
       case 'junk-removal':
         return junkRemovalPricing;
+      case 'staging':
+        return stagingPricing;
       default:
         return '';
     }
@@ -58,6 +61,17 @@ const ServicesPage = () => {
             'Urgency of service'
           ]
         };
+      case 'staging':
+        return {
+          startingText: `Starting at ${stagingPricing} for staging services`,
+          included: [
+            'Furniture and decor placement',
+            'Expert consultation',
+            'Decluttering assistance',
+            'Quick turnaround available',
+            'Photography-ready setup'
+          ]
+        };
       default:
         return {};
     }
@@ -68,11 +82,12 @@ const ServicesPage = () => {
       <section
         className="page-header"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(255,255,255,0.95), rgba(207, 207, 207, 0.7)), url(${heroBg})`
+          backgroundImage: `linear-gradient(135deg, rgba(26, 26, 27, 0.88), rgba(37, 37, 38, 0.82)), url(${bg3})`
         }}
       >
         <div className="container">
           <h1 className="section-title">Our Services</h1>
+          <p className="page-header-est">Est. 2024</p>
           <p className="section-subtitle">
             Comprehensive solutions for all your delivery, moving, and junk removal needs
           </p>
@@ -106,24 +121,27 @@ const ServicesPage = () => {
               
               <div className="service-content">
                 <div className="service-features">
-                  <h3>{service.id === 'deliveries' ? 'What We Offer' : service.id === 'moving' ? 'Our Moving Services' : 'Junk Removal Services'}</h3>
+                  <h3>{service.id === 'deliveries' ? 'What We Offer' : service.id === 'moving' ? 'Our Moving Services' : service.id === 'staging' ? 'Staging Services' : 'Junk Removal Services'}</h3>
                   <div className="features-grid">
-                    {service.features.map((feature, index) => (
+                    {service.features.map((feature, index) => {
+                      const iconMap = {
+                        'deliveries': ['fas fa-clock', 'fas fa-box', 'fas fa-shield-alt', 'fas fa-map-marker-alt', 'fas fa-calendar-alt', 'fas fa-route'],
+                        'moving': ['fas fa-home', 'fas fa-building', 'fas fa-boxes', 'fas fa-tools', 'fas fa-warehouse', 'fas fa-road'],
+                        'junk-removal': ['fas fa-house-user', 'fas fa-briefcase', 'fas fa-hammer', 'fas fa-leaf', 'fas fa-hand-holding-heart', 'fas fa-recycle'],
+                        'staging': ['fas fa-couch', 'fas fa-chair', 'fas fa-loveseat', 'fas fa-comments', 'fas fa-broom', 'fas fa-bolt']
+                      };
+                      return (
                       <div key={index} className="feature-item">
-                        <i className={service.id === 'deliveries' ? 
-                          ['fas fa-clock', 'fas fa-box', 'fas fa-shield-alt', 'fas fa-map-marker-alt', 'fas fa-calendar-alt', 'fas fa-route'][index] :
-                          service.id === 'moving' ? 
-                          ['fas fa-home', 'fas fa-building', 'fas fa-boxes', 'fas fa-tools', 'fas fa-warehouse', 'fas fa-road'][index] :
-                          ['fas fa-house-user', 'fas fa-briefcase', 'fas fa-hammer', 'fas fa-leaf', 'fas fa-hand-holding-heart', 'fas fa-recycle'][index]
-                        }></i>
+                        <i className={(iconMap[service.id] || [])[index] || 'fas fa-check'}></i>
                         <h4>{feature.title}</h4>
                         <p>{feature.description}</p>
                       </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
                 
-                <div className="service-pricing" style={service.id === 'moving' ? {backgroundColor: 'white'} : {}}>
+                <div className="service-pricing">
                   <h3>Pricing</h3>
                   <div className="pricing-info">
                     <p><strong>{pricingDetails.startingText}</strong></p>

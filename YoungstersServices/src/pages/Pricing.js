@@ -1,6 +1,6 @@
 import React from 'react';
 import QuoteForm from '../components/QuoteForm';
-import heroBg from '../assets/hero-bg.png';
+import bg4 from '../assets/bg-4.png';
 // import CTABanner from '../components/CTABanner';
 import { pricingPlans, faqs   } from '../config';
 
@@ -12,14 +12,14 @@ const PricingPage = () => {
       <section 
         className="pricing-hero"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(13, 59, 102, 0.9), rgba(13, 59, 102, 0.7)), url(${heroBg})`
+          backgroundImage: `linear-gradient(135deg, rgba(26, 26, 27, 0.88), rgba(37, 37, 38, 0.82)), url(${bg4})`
         }}
       >
         <div className="container">
           <div className="hero-content">
             <h1 className="hero-title">Transparent Pricing</h1>
             <p className="hero-subtitle">
-              No hidden fees, no surprises. Get instant quotes for all our services.
+              No hidden fees, no surprises. Get fast quotes for all our services.
             </p>
             <div className="hero-features">
               <div className="hero-feature">
@@ -52,19 +52,18 @@ const PricingPage = () => {
           <div className="pricing-grid">
             {pricingPlans.map((plan) => (
               <div key={plan.id} className={`pricing-card ${plan.popular ? 'popular' : ''}`}>
-                {plan.popular && <div className="popular-badge">Most Popular</div>}
-                <div className="service-icon" style={{color: 'red'}}>
+                {plan.popular && <div className="popular-badge">Popular</div>}
+                <div className="card-header">
+                  <div className="service-icon">
                     <i className={plan.icon}></i>
                   </div>
-                <div className="card-header">
-                 
                   <h3 className="service-title">{plan.title}</h3>
                   <p className="service-description">{plan.description}</p>
                 </div>
                 
                 <div className="card-pricing">
                   <div className="price">
-                    <span className="price-label">Starting at</span>
+                    <span className="price-label">From</span>
                     <span className="price-amount">{plan.startingPrice}</span>
                   </div>
                 </div>

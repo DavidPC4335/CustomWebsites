@@ -86,11 +86,49 @@ export   const servicesDetails = [
           description: 'Proper recycling of eligible materials'
         }
       ]
+    },
+    {
+      id: 'staging',
+      title: 'Real Estate Staging',
+      icon: 'fas fa-couch',
+      description: 'Professional home staging to help sell your property faster',
+      features: [
+        {
+          title: 'Full Home Staging',
+          description: 'Complete staging with furniture and decor placement'
+        },
+        {
+          title: 'Partial Staging',
+          description: 'Key rooms staged for maximum buyer impact'
+        },
+        {
+          title: 'Furniture Placement',
+          description: 'Strategic arrangement of existing furniture for best presentation'
+        },
+        {
+          title: 'Consultation',
+          description: 'Expert advice on preparing your home for market'
+        },
+        {
+          title: 'Decluttering & Setup',
+          description: 'Remove clutter and arrange for open houses'
+        },
+        {
+          title: 'Quick Turnaround',
+          description: 'Stage your property in as little as 24 hours'
+        }
+      ]
     }
   ]
 export const links = {
     google:"https://maps.app.goo.gl/ry3aF6eTPaWDVCjs6",
     facebook:"https://www.facebook.com/profile.php?id=61564420419526"
+}
+
+export const contact = {
+    phone: '+1 519-993-1313',
+    phoneTel: '+15199931313',
+    phoneDisplay: '(519) 993-1313'
 }
 
 export const pricingPlans = [
@@ -99,7 +137,7 @@ export const pricingPlans = [
       id: 'moving',
       title: 'Moving Services',
       icon: 'fas fa-box',
-      startingPrice: '$120',
+      startingPrice: '$140',
       description: 'Complete moving solutions for homes and offices',
       features: [
         'Professional moving team',
@@ -140,6 +178,22 @@ export const pricingPlans = [
         'Donation & recycling',
         'Heavy lifting included',
         'Clean-up service'
+      ],
+      popular: false
+    },
+    {
+      id: 'staging',
+      title: 'Real Estate Staging',
+      icon: 'fas fa-couch',
+      startingPrice: '$200',
+      description: 'Professional staging to sell your home faster',
+      features: [
+        'Full home staging',
+        'Partial room staging',
+        'Furniture placement & arrangement',
+        'Expert consultation',
+        'Decluttering & setup',
+        'Quick turnaround'
       ],
       popular: false
     }
