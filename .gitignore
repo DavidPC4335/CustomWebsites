@@ -5,8 +5,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Production builds
-/build
+# Production builds (CRA/Vite/etc. — any nested project)
+**/build/
+build/
+
 /dist
 
 # Environment variables

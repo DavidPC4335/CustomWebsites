@@ -40,7 +40,7 @@ const Home: React.FC = () => {
             </Link>
           </div>
           <div className="services__card">
-            <h2>Full-stack Development</h2>
+            <h2>Full-stack Verifiable Credential Development</h2>
             <p>Worked extensively with verifiable credentialing infrastructures</p>
             <Link to="/projects">
               <button>Learn More</button>

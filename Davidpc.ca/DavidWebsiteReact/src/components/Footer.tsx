@@ -13,6 +13,18 @@ const Footer: React.FC = () => {
           <p className="footer__description">
             Software Engineering Student at University of Guelph
           </p>
+          <h3 className="footer__title">Follow</h3>
+          <div className="footer__social--icons">
+            <a href="https://github.com/DavidPC4335" className="footer__social--icon" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/davidpavlovecunsolo/" className="footer__social--icon" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:davidpc4335@gmail.com" className="footer__social--icon" target="_blank" rel="noopener noreferrer">
+              <i className="fa-regular fa-envelope"></i>
+            </a>
+          </div>
         </div>
         
         <div className="footer__section footer__navigation">
@@ -36,24 +48,13 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="footer__section footer__social">
-          <h3 className="footer__title">Follow</h3>
-          <div className="footer__social--icons">
-            <a href="https://github.com/DavidPC4335" className="footer__social--icon" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/davidpavlovecunsolo/" className="footer__social--icon" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:davidpc4335@gmail.com" className="footer__social--icon" target="_blank" rel="noopener noreferrer">
-              <i className="fa-regular fa-envelope"></i>
-            </a>
-          </div>
+
         </div>
       </div>
       
       <div className="footer__bottom">
         <div className="footer__bottom--content">
-          <p className="footer__copyright">© 2024 David Pavlove Cunsolo. All rights reserved.</p>
+          <p className="footer__copyright">© {new Date().getFullYear()} David Pavlove Cunsolo. All rights reserved.</p>
           <p className="footer__built">Built with React & TypeScript</p>
         </div>
       </div>

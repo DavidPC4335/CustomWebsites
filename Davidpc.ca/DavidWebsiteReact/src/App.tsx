@@ -8,6 +8,7 @@ import Resume from './pages/Resume';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
+import WorkTermReports from './pages/WorkTermReports';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/work-term-reports/*" element={<WorkTermReports />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>

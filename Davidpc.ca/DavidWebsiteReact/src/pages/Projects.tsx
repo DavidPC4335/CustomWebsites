@@ -12,7 +12,7 @@ const Projects: React.FC = () => {
 
       {/* Full Stack Web Application */}
       <div className="project">
-        <h1>Full Stack Web Application</h1>
+        <h1>Full Stack Verifiable Credentialing Infrastructure</h1>
         <p>
           Velocitycreds is an all-in-one issuer and verifier of verifiable credentials that leverages the{' '}
           <a href="https://velocitynetwork.foundation" target="_blank" rel="noopener noreferrer">
