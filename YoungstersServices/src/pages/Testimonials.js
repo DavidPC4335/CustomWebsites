@@ -54,10 +54,6 @@ const TestimonialsPage = () => {
               <p>Average Rating</p>
             </div>
             <div className="stat-item">
-              <h3>1,200+</h3>
-              <p>Reviews</p>
-            </div>
-            <div className="stat-item">
               <h3>98%</h3>
               <p>Customer Satisfaction</p>
             </div>

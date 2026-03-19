@@ -1,3 +1,8 @@
+export const phone = '+1 519-993-1313';
+export const telHref = 'tel:+15199931313';
+
+
+
 export   const servicesDetails = [
     {
       id: 'deliveries',
@@ -10,8 +15,8 @@ export   const servicesDetails = [
           description: 'Urgent deliveries completed within hours'
         },
         {
-          title: 'Real-time tracking',
-          description: 'Track your delivery from pickup to destination'
+          title: 'Friendly Drivers',
+          description: 'Our drivers are friendly and professional'
         },
         {
           title: 'Flexible scheduling',
