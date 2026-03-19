@@ -1,6 +1,6 @@
 import React from 'react';
 import QuoteForm from '../components/QuoteForm';
-
+import { phone, telHref } from '../config';
 const Contact = () => {
   return (
     <div className="contact-page">
@@ -10,8 +10,8 @@ const Contact = () => {
           <p className="section-subtitle">
             Fill out the form below to get an instant estimate and schedule your service
           </p>
-          <a href="tel:+12267670630" className="btn btn-primary">
-                  Call Now: (226) 767-0630
+          <a href={telHref} className="btn btn-primary">
+                  Call Now: {phone}
                 </a>
         </div>
       </section>
@@ -34,8 +34,8 @@ const Contact = () => {
                   <i className="fas fa-phone"></i>
                   <div>
                     <h4>Phone</h4>
-                    <a href="tel:+12267670630">
-                    <p>(226) 767-0630</p>
+                    <a href={telHref}>
+                    <p>{phone}</p>
                     </a>
                   </div>
                 </div>
@@ -73,8 +73,8 @@ const Contact = () => {
               <div className="emergency-contact">
                 <h4>Urgent Service</h4>
                 <p>24/7 urgent services available</p>
-                <a href="tel:+12267670630" className="btn btn-primary">
-                  Call Now: (226) 767-0630
+                <a href={telHref} className="btn btn-primary">
+                  Call Now: {phone}
                 </a>
               </div>
             </div>
