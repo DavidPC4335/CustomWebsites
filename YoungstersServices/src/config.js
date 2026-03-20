@@ -31,7 +31,7 @@ export   const servicesDetails = [
     {
       id: 'moving',
       title: 'Moving Services',
-      icon: 'fas fa-box',
+      icon: 'fas fa-people-carry-box',
       description: 'Professional moving solutions for residential and commercial needs',
       features: [
         {
@@ -100,14 +100,14 @@ export   const servicesDetails = [
       features: [
         {
           title: 'Full Home Staging',
-          description: 'Complete staging with furniture and decor placement'
+          description: 'Complete staging with moving and placing of your Furniture and Decor'
         },
         {
           title: 'Partial Staging',
           description: 'Key rooms staged for maximum buyer impact'
-        },
+        },  
         {
-          title: 'Furniture Placement',
+          title: 'Moving and Placement of your Furniture',
           description: 'Strategic arrangement of existing furniture for best presentation'
         },
         {
@@ -141,7 +141,7 @@ export const pricingPlans = [
     {
       id: 'moving',
       title: 'Moving Services',
-      icon: 'fas fa-box',
+      icon: 'fas fa-people-carry-box',
       startingPrice: '$140',
       description: 'Complete moving solutions for homes and offices',
       features: [
@@ -190,7 +190,7 @@ export const pricingPlans = [
       id: 'staging',
       title: 'Real Estate Staging',
       icon: 'fas fa-couch',
-      startingPrice: '$200',
+      startingPrice: '$140',
       description: 'Professional staging to sell your home faster',
       features: [
         'Full home staging',

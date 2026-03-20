@@ -65,7 +65,7 @@ const ServicesPage = () => {
         return {
           startingText: `Starting at ${stagingPricing} for staging services`,
           included: [
-            'Furniture and decor placement',
+            'Moving and placement of your Furniture and Decor',
             'Expert consultation',
             'Decluttering assistance',
             'Quick turnaround available',
@@ -128,7 +128,7 @@ const ServicesPage = () => {
                         'deliveries': ['fas fa-clock', 'fas fa-box', 'fas fa-shield-alt', 'fas fa-map-marker-alt', 'fas fa-calendar-alt', 'fas fa-route'],
                         'moving': ['fas fa-home', 'fas fa-building', 'fas fa-boxes', 'fas fa-tools', 'fas fa-warehouse', 'fas fa-road'],
                         'junk-removal': ['fas fa-house-user', 'fas fa-briefcase', 'fas fa-hammer', 'fas fa-leaf', 'fas fa-hand-holding-heart', 'fas fa-recycle'],
-                        'staging': ['fas fa-couch', 'fas fa-chair', 'fas fa-loveseat', 'fas fa-comments', 'fas fa-broom', 'fas fa-bolt']
+                        'staging': ['fas fa-couch', 'fas fa-chair', 'fas fa-people-carry-box', 'fas fa-comments', 'fas fa-broom', 'fas fa-bolt']
                       };
                       return (
                       <div key={index} className="feature-item">

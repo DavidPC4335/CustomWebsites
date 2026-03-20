@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="container">
         <div className="hero-content">
           <h1>Fast. Reliable. Affordable.</h1>
-          <p>Moving, junk removal, and delivery – all in one place.</p>
+          <p>Moving, Junk Removal, and Delivery – all in one place.</p>
           <Link to="/contact" className="btn btn-primary btn-large">
             Get a Free Quote
           </Link>
