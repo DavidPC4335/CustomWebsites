@@ -3,8 +3,6 @@ import Services from '../components/Services';
 import WhyChooseUs from '../components/WhyChooseUs';
 // import CTABanner from '../components/CTABanner';
 import headerBg from '../assets/bg-6.png';
-import junkImg from '../assets/bg-5.png';
-import deliveryImg from '../assets/bg-8.png';
 import { pricingPlans, servicesDetails } from '../config';
 
 const ServicesPage = () => {
@@ -121,22 +119,6 @@ const ServicesPage = () => {
                 <h2>{service.title}</h2>
                 <p>{service.description}</p>
               </div>
-
-              {service.id === 'deliveries' && (
-                <div className="service-photo-banner">
-                  <img src={deliveryImg} alt="Youngsters Services van packed for a local delivery" />
-                </div>
-              )}
-              {service.id === 'moving' && (
-                <div className="service-photo-banner">
-                  <img src={headerBg} alt="Youngsters Services crew moving furniture at a Guelph home" />
-                </div>
-              )}
-              {service.id === 'junk-removal' && (
-                <div className="service-photo-banner">
-                  <img src={junkImg} alt="Youngsters Services removing a large item during a junk removal job" />
-                </div>
-              )}
               
               <div className="service-content">
                 <div className="service-features">
