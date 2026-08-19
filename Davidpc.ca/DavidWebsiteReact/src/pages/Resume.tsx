@@ -30,7 +30,7 @@ const Resume: React.FC = () => {
         <div className="resume__container">
           <div className="resume__download-section">
             <a
-              href="/images/Resume.pdf"
+              href="/documents/David%20Pavlove%20Cunsolo%20Resume.pdf"
               download="David_Pavlove_Cunsolo_Resume.pdf"
               className="resume__download-btn"
             >
@@ -38,7 +38,7 @@ const Resume: React.FC = () => {
               Download PDF
             </a>
             <a
-              href="/images/Resume.pdf"
+              href="/documents/David%20Pavlove%20Cunsolo%20Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="resume__view-btn"
@@ -50,7 +50,7 @@ const Resume: React.FC = () => {
           
           <div className="resume__iframe-container">
             <iframe
-              src="/images/Resume.pdf"
+              src="/documents/David%20Pavlove%20Cunsolo%20Resume.pdf"
               title="David Pavlove Cunsolo Resume"
               className="resume__iframe"
             >
@@ -58,7 +58,7 @@ const Resume: React.FC = () => {
                 <p>This browser does not support PDF viewing.</p>
                 <p>Please use one of the options above to view or download the resume.</p>
                 <a 
-                  href="/images/Resume.pdf" 
+                  href="/documents/David%20Pavlove%20Cunsolo%20Resume.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="resume__fallback-link"
