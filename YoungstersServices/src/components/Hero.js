@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import heroBg from '../assets/hero-bg.png';
+import heroBg from '../assets/bg-8.png';
 import { contact } from '../config';
 
 const Hero = () => {
@@ -10,6 +10,11 @@ const Hero = () => {
         <div className="hero-content">
           <h1>Fast. Reliable. Affordable.</h1>
           <p>Moving, Junk Removal, and Delivery – all in one place.</p>
+          <div className="hero-trust">
+            <span><i className="fas fa-star"></i> 5-Star Rated</span>
+            <span><i className="fas fa-users"></i> 5,000+ Customers Served</span>
+            <span><i className="fas fa-heart"></i> 100% Satisfaction</span>
+          </div>
           <Link to="/contact" className="btn btn-primary btn-large">
             Get a Free Quote
           </Link>
@@ -22,4 +27,4 @@ const Hero = () => {
   );
 };
 
-export default Hero; 
+export default Hero;

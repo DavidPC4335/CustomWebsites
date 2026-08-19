@@ -1,6 +1,6 @@
 import React from 'react';
 import Testimonials from '../components/Testimonials';
-import bg3 from '../assets/bg-3.png';
+import headerBg from '../assets/bg-7.png';
 import { links } from '../config';
 const TestimonialsPage = () => {
   const additionalTestimonials = [
@@ -36,7 +36,7 @@ const TestimonialsPage = () => {
   return (
     <div className="testimonials-page">
         <section className="page-header" style={{
-          backgroundImage: `linear-gradient(135deg, rgba(26, 26, 27, 0.88), rgba(37, 37, 38, 0.82)), url(${bg3})`
+          backgroundImage: `linear-gradient(135deg, rgba(26, 26, 27, 0.88), rgba(37, 37, 38, 0.82)), url(${headerBg})`
         }}>
         <div className="container">
           <h1 className="section-title">Customer Testimonials</h1>
@@ -50,16 +50,16 @@ const TestimonialsPage = () => {
         <div className="container">
           <div className="stats-grid">
             <div className="stat-item">
-              <h3>4.9/5</h3>
-              <p>Average Rating</p>
+              <h3>5.0</h3>
+              <p>5-Star Rating</p>
             </div>
             <div className="stat-item">
-              <h3>98%</h3>
+              <h3>100%</h3>
               <p>Customer Satisfaction</p>
             </div>
             <div className="stat-item">
-              <h3>95%</h3>
-              <p>Repeat Customers</p>
+              <h3>5,000+</h3>
+              <p>Customers Served</p>
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@ const TestimonialsPage = () => {
             <div className="platform-item">
                 <i className="fab fa-google"></i>
               <h4>Google Reviews</h4>
-              <p>4.9/5 stars (25+ reviews)</p>
+              <p>5-star reviews</p>
             </div>
               </a>
             <a href={links.facebook} target="_blank" rel="noopener noreferrer">

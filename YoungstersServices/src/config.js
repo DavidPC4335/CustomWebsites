@@ -67,6 +67,10 @@ export   const servicesDetails = [
       description: 'Efficient and eco-friendly disposal services',
       features: [
         {
+          title: 'Hot Tub Removal',
+          description: 'Starting at $600 plus dump fee. We handle the heavy lifting and disposal.'
+        },
+        {
           title: 'Household Cleanouts',
           description: 'Complete home decluttering and cleanup'
         },
@@ -85,10 +89,6 @@ export   const servicesDetails = [
         {
           title: 'Donation Services',
           description: 'Donate usable items to local charities'
-        },
-        {
-          title: 'Recycling',
-          description: 'Proper recycling of eligible materials'
         }
       ]
     },
@@ -133,7 +133,10 @@ export const links = {
 export const contact = {
     phone: '+1 519-993-1313',
     phoneTel: '+15199931313',
-    phoneDisplay: '(519) 993-1313'
+    phoneDisplay: '(519) 993-1313',
+    email: 'Youngsters.services@gmail.com',
+    hoursLine: 'Monday – Sunday: 9:00 AM – 6:00 PM',
+    hoursShort: 'Daily 9AM–6PM'
 }
 
 export const pricingPlans = [
@@ -179,7 +182,7 @@ export const pricingPlans = [
       features: [
         'Eco-friendly disposal',
         'Same-day service',
-        'No hidden fees',
+        'Hot tub removal from $600 + dump fee',
         'Donation & recycling',
         'Heavy lifting included',
         'Clean-up service'
@@ -201,6 +204,17 @@ export const pricingPlans = [
         'Quick turnaround'
       ],
       popular: false
+    }
+  ];
+
+export const specialtyPricing = [
+    {
+      id: 'hot-tub',
+      title: 'Hot Tub Removal',
+      icon: 'fas fa-hot-tub-person',
+      startingPrice: '$600',
+      priceNote: '+ dump fee',
+      description: 'We disconnect, haul, and dispose of hot tubs and spas so you don’t have to.'
     }
   ];
 

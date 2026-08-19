@@ -1,8 +1,8 @@
 import React from 'react';
 import QuoteForm from '../components/QuoteForm';
-import bg4 from '../assets/bg-4.png';
+import headerBg from '../assets/bg-8.png';
 // import CTABanner from '../components/CTABanner';
-import { pricingPlans, faqs   } from '../config';
+import { pricingPlans, specialtyPricing } from '../config';
 
 
 const PricingPage = () => {
@@ -12,7 +12,7 @@ const PricingPage = () => {
       <section 
         className="pricing-hero"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(26, 26, 27, 0.88), rgba(37, 37, 38, 0.82)), url(${bg4})`
+          backgroundImage: `linear-gradient(135deg, rgba(26, 26, 27, 0.88), rgba(37, 37, 38, 0.82)), url(${headerBg})`
         }}
       >
         <div className="container">
@@ -32,7 +32,7 @@ const PricingPage = () => {
               </div>
               <div className="hero-feature">
                 <i className="fas fa-clock"></i>
-                <span>24/7 Support</span>
+                <span>Open 7 Days a Week</span>
               </div>
             </div>
           </div>
@@ -89,6 +89,28 @@ const PricingPage = () => {
               </div>
             ))}
           </div>
+
+          {specialtyPricing.map((plan) => (
+            <div key={plan.id} className="specialty-pricing-card">
+              <div className="specialty-pricing-icon">
+                <i className={plan.icon}></i>
+              </div>
+              <div className="specialty-pricing-copy">
+                <h3>{plan.title}</h3>
+                <p>{plan.description}</p>
+              </div>
+              <div className="specialty-pricing-price">
+                <span className="price-label">Starting at</span>
+                <span className="price-amount">{plan.startingPrice}</span>
+                <span className="price-note">{plan.priceNote}</span>
+              </div>
+              <button className="btn btn-primary" onClick={() => {
+                document.getElementById('quote-calculator').scrollIntoView({ behavior: 'smooth' });
+              }}>
+                Get Quote
+              </button>
+            </div>
+          ))}
         </div>
       </section>
 

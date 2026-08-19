@@ -20,7 +20,7 @@ const Services = () => {
     {
       icon: 'fas fa-trash',
       title: 'Junk Removal',
-      description: 'Efficient junk removal and disposal services. We help you declutter your space responsibly with eco-friendly disposal methods.',
+      description: 'Efficient junk removal and disposal services. We help you declutter your space responsibly — including hot tub removal starting at $600 plus dump fee.',
       link: '/services',
       id: 'junk-removal'
     },

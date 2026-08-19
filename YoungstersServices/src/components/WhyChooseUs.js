@@ -16,11 +16,11 @@ const WhyChooseUs = () => {
     },
     {
       icon: 'fas fa-users',
-      text: 'Professional Team'
+      text: '5,000+ Customers Served'
     },
     {
       icon: 'fas fa-star',
-      text: '5-Star Customer Service'
+      text: '5-Star Rating & 100% Satisfaction'
     },
     {
       icon: 'fas fa-leaf',

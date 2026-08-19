@@ -13,13 +13,12 @@ const Footer = () => {
               </a>
             </p>
             <p>
-              <a href="mailto:info@youngstersservices.com">
-              <i className="fas fa-envelope"></i> info@youngstersservices.com
+              <a href={`mailto:${contact.email}`}>
+              <i className="fas fa-envelope"></i> {contact.email}
               </a>
             </p>
             <p>
-              <i className="fas fa-clock"></i> Mon-Fri: 7AM-7PM<br />
-              Sat-Sun: 8AM-5PM
+              <i className="fas fa-clock"></i> {contact.hoursLine}
             </p>
           </div>
 
@@ -27,7 +26,8 @@ const Footer = () => {
             <h4>Our Services</h4>
             <p><a href="/services">Delivery Services</a></p>
             <p><a href="/services">Moving Services</a></p>
-            <p><a href="/services">Junk Removal</a></p>
+            <p><a href="/services#junk-removal">Junk Removal</a></p>
+            <p><a href="/services#junk-removal">Hot Tub Removal</a></p>
             <p><a href="/services#staging">Real Estate Staging</a></p>
             <p><a href="/contact">Get a Quote</a></p>
           </div>

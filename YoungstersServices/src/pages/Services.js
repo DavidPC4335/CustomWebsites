@@ -2,7 +2,9 @@ import React from 'react';
 import Services from '../components/Services';
 import WhyChooseUs from '../components/WhyChooseUs';
 // import CTABanner from '../components/CTABanner';
-import bg3 from '../assets/bg-3.png';
+import headerBg from '../assets/bg-6.png';
+import junkImg from '../assets/bg-5.png';
+import deliveryImg from '../assets/bg-8.png';
 import { pricingPlans, servicesDetails } from '../config';
 
 const ServicesPage = () => {
@@ -59,7 +61,8 @@ const ServicesPage = () => {
             'Type of materials',
             'Location and accessibility',
             'Urgency of service'
-          ]
+          ],
+          extra: 'Hot tub removal starts at $600 plus dump fee.'
         };
       case 'staging':
         return {
@@ -82,7 +85,7 @@ const ServicesPage = () => {
       <section
         className="page-header"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(26, 26, 27, 0.88), rgba(37, 37, 38, 0.82)), url(${bg3})`
+          backgroundImage: `linear-gradient(135deg, rgba(26, 26, 27, 0.88), rgba(37, 37, 38, 0.82)), url(${headerBg})`
         }}
       >
         <div className="container">
@@ -118,6 +121,22 @@ const ServicesPage = () => {
                 <h2>{service.title}</h2>
                 <p>{service.description}</p>
               </div>
+
+              {service.id === 'deliveries' && (
+                <div className="service-photo-banner">
+                  <img src={deliveryImg} alt="Youngsters Services van packed for a local delivery" />
+                </div>
+              )}
+              {service.id === 'moving' && (
+                <div className="service-photo-banner">
+                  <img src={headerBg} alt="Youngsters Services crew moving furniture at a Guelph home" />
+                </div>
+              )}
+              {service.id === 'junk-removal' && (
+                <div className="service-photo-banner">
+                  <img src={junkImg} alt="Youngsters Services removing a large item during a junk removal job" />
+                </div>
+              )}
               
               <div className="service-content">
                 <div className="service-features">
@@ -127,7 +146,7 @@ const ServicesPage = () => {
                       const iconMap = {
                         'deliveries': ['fas fa-clock', 'fas fa-box', 'fas fa-shield-alt', 'fas fa-map-marker-alt', 'fas fa-calendar-alt', 'fas fa-route'],
                         'moving': ['fas fa-home', 'fas fa-building', 'fas fa-boxes', 'fas fa-tools', 'fas fa-warehouse', 'fas fa-road'],
-                        'junk-removal': ['fas fa-house-user', 'fas fa-briefcase', 'fas fa-hammer', 'fas fa-leaf', 'fas fa-hand-holding-heart', 'fas fa-recycle'],
+                        'junk-removal': ['fas fa-hot-tub-person', 'fas fa-house-user', 'fas fa-briefcase', 'fas fa-hammer', 'fas fa-leaf', 'fas fa-hand-holding-heart', 'fas fa-recycle'],
                         'staging': ['fas fa-couch', 'fas fa-chair', 'fas fa-people-carry-box', 'fas fa-comments', 'fas fa-broom', 'fas fa-bolt']
                       };
                       return (
@@ -174,6 +193,9 @@ const ServicesPage = () => {
                           ))}
                         </ul>
                       </>
+                    )}
+                    {pricingDetails.extra && (
+                      <p className="pricing-extra"><strong>{pricingDetails.extra}</strong></p>
                     )}
                   </div>
                 </div>

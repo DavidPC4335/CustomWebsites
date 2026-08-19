@@ -1,13 +1,14 @@
 import React from 'react';
 import WhyChooseUs from '../components/WhyChooseUs';
-import secondaryBg from '../assets/secondary-bg.png';
+import headerBg from '../assets/bg-7.png';
+import WorkGallery from '../components/WorkGallery';
 const About = () => {
   return (
     <div className="about-page">
       <section 
         className="page-header"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(26, 26, 27, 0.88), rgba(37, 37, 38, 0.82)), url(${secondaryBg})`
+          backgroundImage: `linear-gradient(135deg, rgba(26, 26, 27, 0.88), rgba(37, 37, 38, 0.82)), url(${headerBg})`
         }}
       >
         <div className="container">
@@ -37,19 +38,19 @@ const About = () => {
             <div className="about-stats">
               <div className="stat-item">
                 <h3>5.0</h3>
-                <p>Average Rating</p>
+                <p>5-Star Rating</p>
               </div>
               <div className="stat-item">
-                <h3>500+</h3>
-                <p>Happy Customers</p>
+                <h3>5,000+</h3>
+                <p>Customers Served</p>
+              </div>
+              <div className="stat-item">
+                <h3>100%</h3>
+                <p>Customer Satisfaction</p>
               </div>
               <div className="stat-item">
                 <h3>5+</h3>
                 <p>Corporate Clients</p>
-              </div>
-              <div className="stat-item">
-                <h3>24/7</h3>
-                <p>Emergency Support</p>
               </div>
             </div>
           </div>
@@ -80,6 +81,7 @@ const About = () => {
       </section>
 
       <WhyChooseUs />
+      <WorkGallery />
     </div>
   );
 };

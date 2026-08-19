@@ -1,7 +1,7 @@
 import React from 'react';
 import QuoteForm from '../components/QuoteForm';
 import { contact } from '../config';
-import secondaryBg from '../assets/secondary-bg.png';
+import headerBg from '../assets/bg-5.png';
 
 const Contact = () => {
   return (
@@ -9,7 +9,7 @@ const Contact = () => {
       <section
         className="page-header"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(26, 26, 27, 0.88), rgba(37, 37, 38, 0.82)), url(${secondaryBg})`
+          backgroundImage: `linear-gradient(135deg, rgba(26, 26, 27, 0.88), rgba(37, 37, 38, 0.82)), url(${headerBg})`
         }}
       >
         <div className="container">
@@ -51,8 +51,8 @@ const Contact = () => {
                   <i className="fas fa-envelope"></i>
                   <div>
                     <h4>Email</h4>
-                    <a href="mailto:info@youngstersservices.com">
-                    <p>info@youngstersservices.com</p>
+                    <a href={`mailto:${contact.email}`}>
+                    <p>{contact.email}</p>
                     </a>
                   </div>
                 </div>
@@ -69,17 +69,14 @@ const Contact = () => {
                   <i className="fas fa-clock"></i>
                   <div>
                     <h4>Business Hours</h4>
-                    <p>
-                      Monday - Friday: 7:00 AM - 7:00 PM<br />
-                      Saturday - Sunday: 8:00 AM - 5:00 PM
-                    </p>
+                    <p>{contact.hoursLine}</p>
                   </div>
                 </div>
               </div>
 
               <div className="emergency-contact">
                 <h4>Urgent Service</h4>
-                <p>24/7 urgent services available</p>
+                <p>Same-day service available during business hours</p>
                 <a href={`tel:${contact.phoneTel}`} className="btn btn-primary">
                   Call Now: {contact.phoneDisplay}
                 </a>
